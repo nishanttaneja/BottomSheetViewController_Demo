@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B482242D288800700029E1AD /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = B482242C288800700029E1AD /* BottomSheet */; };
 		B4822432288806C50029E1AD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4822431288806C50029E1AD /* HomeView.swift */; };
 		B4822434288806CF0029E1AD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4822433288806CF0029E1AD /* HomeViewController.swift */; };
 		B48224362888072B0029E1AD /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48224352888072B0029E1AD /* Constants.swift */; };
@@ -16,6 +15,10 @@
 		B4B2FF652887D737005FF98A /* CustomBottomSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4B2FF642887D737005FF98A /* CustomBottomSheetViewController.swift */; };
 		B4B2FF6A2887D739005FF98A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4B2FF692887D739005FF98A /* Assets.xcassets */; };
 		B4B2FF6D2887D739005FF98A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4B2FF6B2887D739005FF98A /* LaunchScreen.storyboard */; };
+		B4D9C6A0288812FC00B2D1AD /* BottomSheetCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9C69F288812FC00B2D1AD /* BottomSheetCollectionViewController.swift */; };
+		B4D9C6A828881F7800B2D1AD /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = B4D9C6A728881F7800B2D1AD /* BottomSheet */; };
+		B4D9C6AB2888225200B2D1AD /* BottomSheetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9C6AA2888225200B2D1AD /* BottomSheetCollectionViewCell.swift */; };
+		B4D9C6AD2888226300B2D1AD /* BottomSheetCollectionViewCellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D9C6AC2888226300B2D1AD /* BottomSheetCollectionViewCellRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		B4B2FF692887D739005FF98A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4B2FF6C2887D739005FF98A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4B2FF6E2887D739005FF98A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4D9C69F288812FC00B2D1AD /* BottomSheetCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetCollectionViewController.swift; sourceTree = "<group>"; };
+		B4D9C6AA2888225200B2D1AD /* BottomSheetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetCollectionViewCell.swift; sourceTree = "<group>"; };
+		B4D9C6AC2888226300B2D1AD /* BottomSheetCollectionViewCellRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetCollectionViewCellRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B482242D288800700029E1AD /* BottomSheet in Frameworks */,
+				B4D9C6A828881F7800B2D1AD /* BottomSheet in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,13 +72,32 @@
 				B4B2FF622887D737005FF98A /* SceneDelegate.swift */,
 				B4822431288806C50029E1AD /* HomeView.swift */,
 				B4822433288806CF0029E1AD /* HomeViewController.swift */,
-				B4B2FF642887D737005FF98A /* CustomBottomSheetViewController.swift */,
+				B4D9C6A1288812FF00B2D1AD /* Controllers */,
 				B48224352888072B0029E1AD /* Constants.swift */,
 				B4B2FF692887D739005FF98A /* Assets.xcassets */,
 				B4B2FF6B2887D739005FF98A /* LaunchScreen.storyboard */,
 				B4B2FF6E2887D739005FF98A /* Info.plist */,
 			);
 			path = BottomSheetViewController_Demo;
+			sourceTree = "<group>";
+		};
+		B4D9C6A1288812FF00B2D1AD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B4B2FF642887D737005FF98A /* CustomBottomSheetViewController.swift */,
+				B4D9C6A9288821F300B2D1AD /* BottomSheetCollectionViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B4D9C6A9288821F300B2D1AD /* BottomSheetCollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B4D9C69F288812FC00B2D1AD /* BottomSheetCollectionViewController.swift */,
+				B4D9C6AA2888225200B2D1AD /* BottomSheetCollectionViewCell.swift */,
+				B4D9C6AC2888226300B2D1AD /* BottomSheetCollectionViewCellRepresentable.swift */,
+			);
+			path = BottomSheetCollectionViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,7 +117,7 @@
 			);
 			name = BottomSheetViewController_Demo;
 			packageProductDependencies = (
-				B482242C288800700029E1AD /* BottomSheet */,
+				B4D9C6A728881F7800B2D1AD /* BottomSheet */,
 			);
 			productName = BottomSheetViewController_Demo;
 			productReference = B4B2FF5D2887D737005FF98A /* BottomSheetViewController_Demo.app */;
@@ -123,7 +148,7 @@
 			);
 			mainGroup = B4B2FF542887D737005FF98A;
 			packageReferences = (
-				B482242B288800700029E1AD /* XCRemoteSwiftPackageReference "BottomSheet-Package" */,
+				B4D9C6A628881F7800B2D1AD /* XCRemoteSwiftPackageReference "BottomSheet-Package" */,
 			);
 			productRefGroup = B4B2FF5E2887D737005FF98A /* Products */;
 			projectDirPath = "";
@@ -152,7 +177,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4822434288806CF0029E1AD /* HomeViewController.swift in Sources */,
+				B4D9C6A0288812FC00B2D1AD /* BottomSheetCollectionViewController.swift in Sources */,
 				B4B2FF652887D737005FF98A /* CustomBottomSheetViewController.swift in Sources */,
+				B4D9C6AD2888226300B2D1AD /* BottomSheetCollectionViewCellRepresentable.swift in Sources */,
+				B4D9C6AB2888225200B2D1AD /* BottomSheetCollectionViewCell.swift in Sources */,
 				B4822432288806C50029E1AD /* HomeView.swift in Sources */,
 				B4B2FF612887D737005FF98A /* AppDelegate.swift in Sources */,
 				B4B2FF632887D737005FF98A /* SceneDelegate.swift in Sources */,
@@ -366,7 +394,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		B482242B288800700029E1AD /* XCRemoteSwiftPackageReference "BottomSheet-Package" */ = {
+		B4D9C6A628881F7800B2D1AD /* XCRemoteSwiftPackageReference "BottomSheet-Package" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nishanttaneja/BottomSheet-Package";
 			requirement = {
@@ -377,9 +405,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B482242C288800700029E1AD /* BottomSheet */ = {
+		B4D9C6A728881F7800B2D1AD /* BottomSheet */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B482242B288800700029E1AD /* XCRemoteSwiftPackageReference "BottomSheet-Package" */;
+			package = B4D9C6A628881F7800B2D1AD /* XCRemoteSwiftPackageReference "BottomSheet-Package" */;
 			productName = BottomSheet;
 		};
 /* End XCSwiftPackageProductDependency section */

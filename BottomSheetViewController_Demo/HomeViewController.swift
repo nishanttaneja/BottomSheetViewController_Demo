@@ -12,12 +12,16 @@ class HomeViewController: UIViewController, HomeViewDelegate {
     
     private let visualEffectView = UIVisualEffectView()
     
+    private let items: [Item] = [
+        .init(), .init(), .init(), .init(), 
+    ]
     
     // MARK: - HomeViewDelegate
     
     func homeView(_ view: HomeView, didSelect button: UIButton) {
-        let bottomSheetVC = CustomBottomSheetViewController()
+        let bottomSheetVC = BottomSheetCollectionViewController()
         bottomSheetVC.delegate = self
+        bottomSheetVC.collectionDataSource = self
         present(bottomSheetVC, animated: true)
     }
     
@@ -60,4 +64,19 @@ extension HomeViewController: BottomSheetViewControllerDelegate {
             self.visualEffectView.effect = nil
         }
     }
+}
+
+
+// MARK: - BottomSheetCollectionViewController
+
+extension HomeViewController: BottomSheetCollectionViewControllerDataSource, BottomSheetCollectionViewControllerDelegate {
+    
+    // MARK: DataSource
+    
+    func representableItems(inBottomSheetCollectionViewController controller: BottomSheetCollectionViewController) -> [BottomSheetCollectionViewCellRepresentable] {
+        items
+    }
+    
+    // MARK: Delegate
+    
 }

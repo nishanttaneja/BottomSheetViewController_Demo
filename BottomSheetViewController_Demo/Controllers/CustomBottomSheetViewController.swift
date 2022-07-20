@@ -40,6 +40,6 @@ class CustomBottomSheetViewController: BottomSheetViewController {
     
     override func config() {
         super.config()
-        bottomSheetView.minimumHeight = 400
+        bottomSheetView.setContentMinimumHeight(400)
     }
 }
